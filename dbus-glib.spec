@@ -1,11 +1,11 @@
 Summary:	GLib-based library for using D-BUS
 Name:		dbus-glib
-Version:	0.100
-Release:	2
+Version:	0.100.2
+Release:	1
 License:	AFL v2.1 or GPL v2
 Group:		Libraries
 Source0:	http://dbus.freedesktop.org/releases/dbus-glib/%{name}-%{version}.tar.gz
-# Source0-md5:	d33959a9c0c6a158f5ac6d640316e89e
+# Source0-md5:	ad0920c7e3aad669163bb59171cf138e
 Patch0:		%{name}-makefile.patch
 URL:		http://www.freedesktop.org/Software/dbus
 BuildRequires:	autoconf
