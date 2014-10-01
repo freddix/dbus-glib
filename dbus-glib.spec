@@ -1,7 +1,7 @@
 Summary:	GLib-based library for using D-BUS
 Name:		dbus-glib
 Version:	0.102
-Release:	1
+Release:	2
 License:	AFL v2.1 or GPL v2
 Group:		Libraries
 Source0:	http://dbus.freedesktop.org/releases/dbus-glib/%{name}-%{version}.tar.gz
@@ -50,6 +50,7 @@ dbus-glib API documentation.
 %configure \
 	--disable-silent-rules	\
 	--disable-static	\
+	--enable-bash-completion=no \
 	--with-html-dir=%{_gtkdocdir}
 %{__make}
 
@@ -58,6 +59,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %clean
 rm -rf $RPM_BUILD_ROOT
